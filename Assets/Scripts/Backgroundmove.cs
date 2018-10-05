@@ -2,15 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Backgroundmove : MonoBehaviour {
+public class Backgroundmove : MonoBehaviour
+{ 
+    public float moveSpeed = 0.5f;
+    public float backgroundSize;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private Vector3 startPosition;
+
+    void Start()
+    {
+        startPosition = transform.position;
+    }
+
+    void Update()
+    {
+        Vector2 offset = new Vector2(Time.time * moveSpeed, 0);
+        GetComponent<Renderer>().material.mainTextureOffset = offset;
+    }
 }
