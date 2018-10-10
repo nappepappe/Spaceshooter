@@ -28,6 +28,9 @@ public class PlayerMovement : MonoBehaviour
         {
             rbody.velocity = new Vector2(0, -speed);
         }
-        
+        else
+        {
+            rbody.velocity = new Vector2(0, 0);
+        }
     }
 }
