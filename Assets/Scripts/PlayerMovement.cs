@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public TriggerScript Hitbox1;
     public TriggerScript Hitbox2;
+    public Rigidbody2D rbody;
     // Use this for initialization
     void Start()
     {
@@ -21,11 +22,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W) && Hitbox1.TriggerOn == false)
         {
-            transform.Translate(0f, speed, 0f, Space.World);
+            rbody.velocity = new Vector2(0, speed);
         }
         else if (Input.GetKey(KeyCode.S) && Hitbox2.TriggerOn == false)
         {
-            transform.Translate(0f, -speed, 0f, Space.World);
+            rbody.velocity = new Vector2(0, -speed);
         }
         
     }
