@@ -2,22 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class EnemyMove : MonoBehaviour
 {
-    public Rigidbody2D franstorm;
+    public float moveSpeed;
     // Use this for initialization
     void Start()
     {
-        franstorm.rotation = -90;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Destroy(gameObject);
+        transform.Translate(-moveSpeed, 0f, 0f, Space.World);
     }
 }
