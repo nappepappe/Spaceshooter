@@ -55,8 +55,8 @@ GameObject:
   - component: {fileID: 4351139448813140}
   - component: {fileID: 212230371304379144}
   - component: {fileID: 114765118436909830}
+  - component: {fileID: 114449636745695174}
   - component: {fileID: 50443605812085498}
-  - component: {fileID: 114632727729116782}
   - component: {fileID: 60097367863801434}
   m_Layer: 0
   m_Name: Player
@@ -225,6 +225,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.47554246, y: 0.008505136}
   m_EdgeRadius: 0
+--- !u!114 &114449636745695174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1522958990845268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ac3c30848b7db64695015d1c94597bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1391656413690340, guid: 8acbeacb99bd02d45a87e2303d7360cf, type: 2}
+  velocity: {x: 0, y: 0}
+  shoot: 0
+  offset: {x: 0.4, y: 0}
+  timer: 0
 --- !u!114 &114583954364654872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -237,21 +253,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TriggerOn: 0
---- !u!114 &114632727729116782
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1522958990845268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ede38501d00e5e042a87bf800a287c94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
-  velocity: {x: 20, y: 0}
-  shoot: 32
-  offset: {x: 0.4, y: 0}
 --- !u!114 &114765118436909830
 MonoBehaviour:
   m_ObjectHideFlags: 1
