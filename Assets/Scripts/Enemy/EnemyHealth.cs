@@ -9,6 +9,10 @@ public class EnemyHealth : MonoBehaviour
     private float halfHealth;
     public SpriteRenderer sprite;
     private float timer;
+
+    public AudioClip hurt;
+    public AudioSource hurtSource;
+
     // Use this for initialization
     void Start()
     {
@@ -26,6 +30,7 @@ public class EnemyHealth : MonoBehaviour
         if (timer <= 2f && timer > 1.95f)
         {
             sprite.color = Color.Lerp(Color.white, Color.red, 10);
+            hurtSource.Play();
         }
         else
         {
