@@ -198,6 +198,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 2
   turnRed: 2
+  deathScore: 1
+  points: {fileID: 114003609222053468, guid: ccc6d4286d2036e4fab970271c0e2492, type: 2}
   sprite: {fileID: 212456818070001466}
   splosion: {fileID: 1202972217619190, guid: 83e3604cf61600e4a91b54ec0865b048, type: 2}
   hurtSource: {fileID: 0}
