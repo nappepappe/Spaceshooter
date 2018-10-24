@@ -2,18 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMove : MonoBehaviour
+public class StartScript : MonoBehaviour
 {
-    public float moveSpeed;
+    public float timer;
+    public AudioSource startSource;
+
     // Use this for initialization
     void Start()
     {
+        timer = 3f;
+        startSource.Play();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        transform.Translate(-moveSpeed, 0f, 0f, Space.World);
+        timer -= Time.deltaTime;
     }
 }

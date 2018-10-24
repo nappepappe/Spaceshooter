@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int health;
-    public float turnRed;
     private float halfHealth;
     public int deathScore;
 
@@ -19,7 +18,6 @@ public class EnemyHealth : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        halfHealth = health / turnRed;
         hurtSource = GetComponent<AudioSource>();
 
         points = GameObject.Find("ScoreKeeper").GetComponent<Points>();
@@ -57,7 +55,10 @@ public class EnemyHealth : MonoBehaviour
         }
         if (collision.gameObject.tag == "Wall")
         {
+            if (points.score != 0f)
+                points.score = points.score - deathScore;
             Destroy(gameObject);
+
         }
         if (collision.gameObject.tag == "Player")
         {
