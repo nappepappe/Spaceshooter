@@ -199,6 +199,7 @@ MonoBehaviour:
   health: 10
   turnRed: 3
   sprite: {fileID: 212452078864946414}
+  splosion: {fileID: 1202972217619190, guid: 83e3604cf61600e4a91b54ec0865b048, type: 2}
   hurtSource: {fileID: 82979246767524028}
 --- !u!114 &114894528766942248
 MonoBehaviour:

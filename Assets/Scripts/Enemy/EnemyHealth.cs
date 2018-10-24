@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour
     private float halfHealth;
     public SpriteRenderer sprite;
     private float timer;
+    public GameObject splosion;
     
     public AudioSource hurtSource;
 
@@ -17,6 +18,7 @@ public class EnemyHealth : MonoBehaviour
     {
         halfHealth = health / turnRed;
         hurtSource = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -25,6 +27,7 @@ public class EnemyHealth : MonoBehaviour
         timer -= Time.deltaTime;
         if (health <= 0)
         {
+            GameObject die = Instantiate(splosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
         if (timer <= 2f && timer > 1.95f)
@@ -42,7 +45,11 @@ public class EnemyHealth : MonoBehaviour
         if (collision.gameObject.tag == "Projectile")
         {
             health = health - 1;
+            timer = 2f;
         }
-        timer = 2f;
+        if (collision.gameObject.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
     }
 }

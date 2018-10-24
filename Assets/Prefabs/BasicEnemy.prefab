@@ -100,7 +100,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3fd649dbc498bd34da9b5c1adf33ea59, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -199,6 +199,7 @@ MonoBehaviour:
   health: 2
   turnRed: 2
   sprite: {fileID: 212456818070001466}
+  splosion: {fileID: 1202972217619190, guid: 83e3604cf61600e4a91b54ec0865b048, type: 2}
   hurtSource: {fileID: 0}
 --- !u!114 &114543663072228434
 MonoBehaviour:
