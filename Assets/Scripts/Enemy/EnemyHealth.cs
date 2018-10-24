@@ -33,7 +33,11 @@ public class EnemyHealth : MonoBehaviour
         if (timer <= 2f && timer > 1.95f)
         {
             sprite.color = Color.Lerp(Color.white, Color.red, 10);
+        }
+        if (timer <= 2f && timer > 1.97f)
+        {
             hurtSource.Play();
+
         }
         else
         {
