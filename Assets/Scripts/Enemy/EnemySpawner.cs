@@ -32,12 +32,12 @@ public class EnemySpawner : MonoBehaviour
 
         if (spawnTimer <= 0f)
         {
-            GameObject spawn = Instantiate(basicEnemy, new Vector2(spawnPosX, Random.Range(-4f, 4f)), basicEnemy.transform.rotation);
+            GameObject spawn = Instantiate(basicEnemy, new Vector2(spawnPosX, Random.Range(-3f, 4f)), basicEnemy.transform.rotation);
             spawnTimer = 2f;
         }
         if (spawnTimer2 <= 0f && scoreKeeper.strong == true)
         {
-            GameObject spawn = Instantiate(strongEnemy, new Vector2(spawnPosX, Random.Range(-4f, 4f)), strongEnemy.transform.rotation);
+            GameObject spawn = Instantiate(strongEnemy, new Vector2(spawnPosX, Random.Range(-3f, 4f)), strongEnemy.transform.rotation);
             spawnTimer2 = 4f;
         }
     }

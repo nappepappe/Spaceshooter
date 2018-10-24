@@ -32,8 +32,7 @@ public class EnemyHealth : MonoBehaviour
         if (health <= 0)
         {
             points.score = points.score + deathScore;
-            GameObject die = Instantiate(splosion, transform.position, transform.rotation);
-            Destroy(gameObject);
+            Death();
         }
         if (timer <= 2f && timer > 1.95f)
         {
@@ -60,5 +59,14 @@ public class EnemyHealth : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (collision.gameObject.tag == "Player")
+        {
+            Death();
+        }
+    }
+    void Death()
+    {
+        GameObject die = Instantiate(splosion, transform.position, transform.rotation);
+        Destroy(gameObject);
     }
 }

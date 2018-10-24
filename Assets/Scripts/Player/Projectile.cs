@@ -24,7 +24,11 @@ public class Projectile : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameObject splode2 = Instantiate(splosion, transform.position, transform.rotation);
-        Destroy(gameObject);
+        if (collision.gameObject.tag != "Player")
+        {
+            GameObject splode2 = Instantiate(splosion, transform.position, transform.rotation);
+            Destroy(gameObject);
+
+        }
     }
 }

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212452078864946414}
   - component: {fileID: 114639059802638680}
   - component: {fileID: 114894528766942248}
+  - component: {fileID: 114510092675494290}
   - component: {fileID: 61458619994079292}
   - component: {fileID: 50183026084723412}
   - component: {fileID: 82979246767524028}
@@ -185,6 +186,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114510092675494290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1334809839584648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232425209cbbae548ae0c2f14ac874b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScript: {fileID: 0}
+  damage: 2
 --- !u!114 &114639059802638680
 MonoBehaviour:
   m_ObjectHideFlags: 1
