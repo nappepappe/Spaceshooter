@@ -2,18 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMove : MonoBehaviour
+public class Destroy : MonoBehaviour
 {
-    public float moveSpeed;
+    private float timer;
     // Use this for initialization
     void Start()
     {
+        timer = 0.05f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        transform.Translate(-moveSpeed, 0f, 0f, Space.World);
+        timer -= Time.deltaTime;
+        if (timer <= 0f)
+        {
+            Destroy(gameObject);
+        }
     }
 }
