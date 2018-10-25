@@ -55,3 +55,7 @@ MonoBehaviour:
   strong: 0
   tank: 0
   shooter: 0
+  "trettiotv\xE5": {fileID: 1145201644672220, guid: a587469a392f5814f88e3a08a691f8ec,
+    type: 2}
+  trettiotre: {fileID: 1312529870010082, guid: 54c21b80c1d958a4391f112858be0d29, type: 2}
+  scoreText: {fileID: 0}

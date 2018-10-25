@@ -20,6 +20,10 @@ public class StartScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    }
+    private void FixedUpdate()
+    {
+        if (startText != null)
         startText.text = Mathf.Round(timer).ToString();
         
         timer -= Time.deltaTime;
@@ -28,5 +32,6 @@ public class StartScript : MonoBehaviour
             canPlay = true;
             Destroy(startText);
         }
+        
     }
 }
