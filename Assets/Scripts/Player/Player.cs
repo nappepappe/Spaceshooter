@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        health = 5f;
         hurtSource = GetComponent<AudioSource>();
         timer = 0;
     }

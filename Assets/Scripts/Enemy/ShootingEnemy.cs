@@ -13,6 +13,7 @@ public class ShootingEnemy : MonoBehaviour
 
     void Start()
     {
+
         sprite = GetComponent<SpriteRenderer>();
         timer = 0f;
     }
@@ -20,12 +21,20 @@ public class ShootingEnemy : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        if (timer <= 0f)
+        if (timer <= 0f && canShoot == true)
         {
             GameObject go = (GameObject)Instantiate(projectile, (Vector2)transform.position + offset * transform.localScale.x, Quaternion.identity);
 
             go.GetComponent<Rigidbody2D>().velocity = new Vector2(speed.x * transform.localScale.x, speed.y);
             timer = 0.6f;
+        }
+        if (GameObject.Find("Player") == null)
+        {
+            canShoot = false;
+        }
+        else if (GameObject.Find("Player") != null)
+        {
+            canShoot = true;
         }
 
     }
