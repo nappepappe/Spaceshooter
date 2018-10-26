@@ -57,7 +57,7 @@ public class EnemySpawner : MonoBehaviour
         }
         if (spawnTimer4 <= 0f && scoreKeeper.dodge == true)
         {
-            GameObject spawn = Instantiate(DodgingEnemy, new Vector2(spawnPosX, 0f), DodgingEnemy.transform.rotation);
+            GameObject spawn = Instantiate(DodgingEnemy, new Vector2(spawnPosX, spawnTrans.position.y), DodgingEnemy.transform.rotation);
             spawnTimer4 = 10f;
         }
     }

@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
+        if (health > 0f)
         healthText.text = "Health: " + health.ToString();
 
         if (timer <= 0)
@@ -32,6 +33,7 @@ public class Player : MonoBehaviour
         }
         if (health <= 0)
         {
+            healthText.text = "Health: 0";
             Death();
         }
     }
