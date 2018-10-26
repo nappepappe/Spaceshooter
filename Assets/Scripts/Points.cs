@@ -9,7 +9,11 @@ public class Points : MonoBehaviour
     public bool strong;
     public bool tank;
     public bool shooter;
+    private bool trettioTre = false;
+    private bool trettioTvå = false;
 
+    public GameObject trettiotvå;
+    public GameObject trettiotre;
     public Text scoreText;
     // Use this for initialization
     void Start()
@@ -23,6 +27,24 @@ public class Points : MonoBehaviour
     {
         PlayerPrefs.SetFloat("playerScore", score);
         scoreText.text = "Score: " + score.ToString();
+        if (score == 32 && trettioTvå == false)
+        {
+            GameObject trettio = Instantiate(trettiotvå, new Vector3(0f, 0f, 0f), new Quaternion(0f, 0f, 0f, 0f));
+            trettioTvå = true;
+        }
+        else if (score != 32)
+        {
+            trettioTvå = false;
+        }
+        if (score == 33 && trettioTre == false)
+        {
+            GameObject trettio = Instantiate(trettiotre, new Vector3(0f, 0f, 0f), new Quaternion(0f, 0f, 0f, 0f));
+            trettioTre = true;
+        }
+        else if (score != 33)
+        {
+            trettioTre = false;
+        }
 
         if (score >= 10)
         {
