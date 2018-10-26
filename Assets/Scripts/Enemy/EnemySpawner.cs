@@ -7,6 +7,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject strongEnemy;
     public GameObject basicEnemy;
     public GameObject TankEnemy;
+    public GameObject DodgingEnemy;
     public Transform spawnTrans;
     public Points scoreKeeper;
 
@@ -14,6 +15,7 @@ public class EnemySpawner : MonoBehaviour
     private float spawnTimer;
     private float spawnTimer2;
     private float spawnTimer3;
+    private float spawnTimer4;
     
 
     // Use this for initialization
@@ -23,6 +25,7 @@ public class EnemySpawner : MonoBehaviour
         spawnTimer = 5f;
         spawnTimer2 = 4f;
         spawnTimer3 = 4f;
+        spawnTimer4 = 4f;
         scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<Points>();
     }
 
@@ -34,6 +37,8 @@ public class EnemySpawner : MonoBehaviour
         spawnTimer2 -= Time.deltaTime;
 
         spawnTimer3 -= Time.deltaTime;
+
+        spawnTimer4 -= Time.deltaTime;
 
         if (spawnTimer <= 0f)
         {
@@ -48,7 +53,12 @@ public class EnemySpawner : MonoBehaviour
         if (spawnTimer3 <= 0f && scoreKeeper.tank == true)
         {
             GameObject spawn = Instantiate(TankEnemy, new Vector2(spawnPosX, Random.Range(-3f, 4f)), TankEnemy.transform.rotation);
-            spawnTimer3 = 25f;
+            spawnTimer3 = 30f;
+        }
+        if (spawnTimer4 <= 0f && scoreKeeper.dodge == true)
+        {
+            GameObject spawn = Instantiate(DodgingEnemy, new Vector2(spawnPosX, 0f), DodgingEnemy.transform.rotation);
+            spawnTimer4 = 10f;
         }
     }
 }
