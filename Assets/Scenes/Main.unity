@@ -163,6 +163,12 @@ Prefab:
       value: 
       objectReference: {fileID: 1096533826416812, guid: 9c905a70045bfc848bb188efbed369b5,
         type: 2}
+    - target: {fileID: 114131673461938620, guid: acc9035e52a4c0b4c878085075134a8b,
+        type: 2}
+      propertyPath: ShootingEnemy
+      value: 
+      objectReference: {fileID: 1346187946161562, guid: da8a418b0d46a4441ad8c9ca4698ecba,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acc9035e52a4c0b4c878085075134a8b, type: 2}
   m_IsPrefabAsset: 0
@@ -818,6 +824,11 @@ Prefab:
         type: 2}
       propertyPath: speed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114792247749119568, guid: e256eb9bf1fca714c9c254311bed788c,
+        type: 2}
+      propertyPath: health
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e256eb9bf1fca714c9c254311bed788c, type: 2}
