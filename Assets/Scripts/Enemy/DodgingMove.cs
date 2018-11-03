@@ -14,6 +14,6 @@ public class DodgingMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rbody.velocity = new Vector2(-5f, 10f * Mathf.Sin(Time.time * 5));
+        rbody.velocity = new Vector2(-5f, 10f * Mathf.Sin(Time.time * 5) * 0.5f);
     }
 }

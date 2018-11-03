@@ -62,19 +62,19 @@ public class EnemySpawner : MonoBehaviour
         }
         if (spawnTimer4 <= 0f && scoreKeeper.dodge == true)
         {
-            GameObject spawn = Instantiate(DodgingEnemy, new Vector2(spawnPosX, spawnTrans.position.y), DodgingEnemy.transform.rotation);
+            GameObject spawn = Instantiate(DodgingEnemy, new Vector2(spawnPosX, Random.Range(-1, 1)), DodgingEnemy.transform.rotation);
             spawnTimer4 = 10f;
         }
         if (spawnTimer5 <= 0f && scoreKeeper.shooter == true)
         {
-            GameObject spawn = Instantiate(ShootingEnemy, new Vector2(spawnPosX, Random.Range(-3f, 4f)), TankEnemy.transform.rotation);
+            GameObject spawn = Instantiate(ShootingEnemy, new Vector2(spawnPosX, Random.Range(-3f, 4f)), ShootingEnemy.transform.rotation);
             spawnTimer5 = 20f;
 
         }
         if (spawnTimer6 <= 0f && scoreKeeper.shootDodge == true)
         {
-            GameObject spawn = Instantiate(ShootingEnemy, new Vector2(spawnPosX, Random.Range(-3f, 4f)), TankEnemy.transform.rotation);
-            spawnTimer6 = 40f;
+            GameObject spawn = Instantiate(ShootingDodgingEnemy, new Vector2(spawnPosX, Random.Range(-1, 1)), ShootingDodgingEnemy.transform.rotation);
+            spawnTimer6 = 25f;
         }
     }
 }
