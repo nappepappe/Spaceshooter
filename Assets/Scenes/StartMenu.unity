@@ -1161,6 +1161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2066221815}
   - component: {fileID: 2066221814}
+  - component: {fileID: 2066221816}
   m_Layer: 0
   m_Name: 1469700719
   m_TagString: Untagged
@@ -1221,9 +1222,20 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2066221813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.13, y: -2.13, z: 0}
+  m_LocalPosition: {x: -5.13, y: -19.89, z: 0}
   m_LocalScale: {x: 1.5688981, y: 1.5688981, z: 1.5688981}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2066221816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2066221813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e384051ab63c333418f2619733089d21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
