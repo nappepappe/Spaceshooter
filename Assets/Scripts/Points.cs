@@ -59,7 +59,7 @@ public class Points : MonoBehaviour
         {
             shooter = true;
         }
-        if (score >= 10)
+        if (score >= 45)
         {
             dodge = true;
         }

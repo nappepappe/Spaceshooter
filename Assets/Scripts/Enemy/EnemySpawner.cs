@@ -7,11 +7,8 @@ public class EnemySpawner : MonoBehaviour
     public GameObject strongEnemy;
     public GameObject basicEnemy;
     public GameObject TankEnemy;
-<<<<<<< HEAD
     public GameObject ShootingEnemy;
-=======
     public GameObject DodgingEnemy;
->>>>>>> origin/FredriksGren
     public Transform spawnTrans;
     public Points scoreKeeper;
 
