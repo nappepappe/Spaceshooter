@@ -7,11 +7,9 @@ public class EnemySpawner : MonoBehaviour
     public GameObject strongEnemy;
     public GameObject basicEnemy;
     public GameObject TankEnemy;
-<<<<<<< HEAD
     public GameObject ShootingEnemy;
-=======
+    public GameObject ShootingDodgingEnemy;
     public GameObject DodgingEnemy;
->>>>>>> origin/FredriksGren
     public Transform spawnTrans;
     public Points scoreKeeper;
 
@@ -20,7 +18,9 @@ public class EnemySpawner : MonoBehaviour
     private float spawnTimer2;
     private float spawnTimer3;
     private float spawnTimer4;
-    
+    private float spawnTimer5;
+    private float spawnTimer6;
+
 
     // Use this for initialization
     void Start()
@@ -30,6 +30,8 @@ public class EnemySpawner : MonoBehaviour
         spawnTimer2 = 4f;
         spawnTimer3 = 4f;
         spawnTimer4 = 4f;
+        spawnTimer5 = 4f;
+        spawnTimer6 = 4f;
         scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<Points>();
     }
 
@@ -37,12 +39,11 @@ public class EnemySpawner : MonoBehaviour
     void Update()
     {
         spawnTimer -= Time.deltaTime;
-
         spawnTimer2 -= Time.deltaTime;
-
         spawnTimer3 -= Time.deltaTime;
-
         spawnTimer4 -= Time.deltaTime;
+        spawnTimer5 -= Time.deltaTime;
+        spawnTimer6 -= Time.deltaTime;
 
         if (spawnTimer <= 0f)
         {
@@ -64,10 +65,16 @@ public class EnemySpawner : MonoBehaviour
             GameObject spawn = Instantiate(DodgingEnemy, new Vector2(spawnPosX, spawnTrans.position.y), DodgingEnemy.transform.rotation);
             spawnTimer4 = 10f;
         }
-        if (spawnTimer4 <= 0f && scoreKeeper.shooter == true)
+        if (spawnTimer5 <= 0f && scoreKeeper.shooter == true)
         {
             GameObject spawn = Instantiate(ShootingEnemy, new Vector2(spawnPosX, Random.Range(-3f, 4f)), TankEnemy.transform.rotation);
-            spawnTimer4 = 10f;
+            spawnTimer5 = 10f;
+
+        }
+        if (spawnTimer6 <= 0f && scoreKeeper.shootDodge == true)
+        {
+            GameObject spawn = Instantiate(ShootingEnemy, new Vector2(spawnPosX, Random.Range(-3f, 4f)), TankEnemy.transform.rotation);
+            spawnTimer6 = 40f;
         }
     }
 }

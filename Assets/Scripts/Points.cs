@@ -10,6 +10,7 @@ public class Points : MonoBehaviour
     public bool tank;
     public bool shooter;
     public bool dodge;
+    public bool shootDodge;
     private bool trettioTre = false;
     private bool trettioTvå = false;
 
@@ -55,13 +56,17 @@ public class Points : MonoBehaviour
         {
             tank = true;
         }
-        if (score >= 60)
+        if (score >= 10)
         {
             shooter = true;
         }
         if (score >= 10)
         {
             dodge = true;
+        }
+        if (score >= 40)
+        {
+            shootDodge = true;
         }
     }
 }
