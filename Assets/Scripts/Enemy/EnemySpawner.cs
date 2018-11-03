@@ -68,7 +68,7 @@ public class EnemySpawner : MonoBehaviour
         if (spawnTimer5 <= 0f && scoreKeeper.shooter == true)
         {
             GameObject spawn = Instantiate(ShootingEnemy, new Vector2(spawnPosX, Random.Range(-3f, 4f)), TankEnemy.transform.rotation);
-            spawnTimer5 = 10f;
+            spawnTimer5 = 20f;
 
         }
         if (spawnTimer6 <= 0f && scoreKeeper.shootDodge == true)

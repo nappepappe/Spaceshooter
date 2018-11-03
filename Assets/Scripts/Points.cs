@@ -56,7 +56,7 @@ public class Points : MonoBehaviour
         {
             tank = true;
         }
-        if (score >= 10)
+        if (score >= 20)
         {
             shooter = true;
         }
