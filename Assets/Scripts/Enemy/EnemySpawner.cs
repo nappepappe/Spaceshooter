@@ -7,7 +7,11 @@ public class EnemySpawner : MonoBehaviour
     public GameObject strongEnemy;
     public GameObject basicEnemy;
     public GameObject TankEnemy;
+<<<<<<< HEAD
     public GameObject ShootingEnemy;
+=======
+    public GameObject DodgingEnemy;
+>>>>>>> origin/FredriksGren
     public Transform spawnTrans;
     public Points scoreKeeper;
 
@@ -38,6 +42,8 @@ public class EnemySpawner : MonoBehaviour
 
         spawnTimer3 -= Time.deltaTime;
 
+        spawnTimer4 -= Time.deltaTime;
+
         if (spawnTimer <= 0f)
         {
             GameObject spawn = Instantiate(basicEnemy, new Vector2(spawnPosX, Random.Range(-3f, 4f)), basicEnemy.transform.rotation);
@@ -51,7 +57,12 @@ public class EnemySpawner : MonoBehaviour
         if (spawnTimer3 <= 0f && scoreKeeper.tank == true)
         {
             GameObject spawn = Instantiate(TankEnemy, new Vector2(spawnPosX, Random.Range(-3f, 4f)), TankEnemy.transform.rotation);
-            spawnTimer3 = 25f;
+            spawnTimer3 = 30f;
+        }
+        if (spawnTimer4 <= 0f && scoreKeeper.dodge == true)
+        {
+            GameObject spawn = Instantiate(DodgingEnemy, new Vector2(spawnPosX, spawnTrans.position.y), DodgingEnemy.transform.rotation);
+            spawnTimer4 = 10f;
         }
         if (spawnTimer4 <= 0f && scoreKeeper.shooter == true)
         {

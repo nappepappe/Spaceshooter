@@ -9,6 +9,7 @@ public class Points : MonoBehaviour
     public bool strong;
     public bool tank;
     public bool shooter;
+    public bool dodge;
     private bool trettioTre = false;
     private bool trettioTvå = false;
 
@@ -46,7 +47,7 @@ public class Points : MonoBehaviour
             trettioTre = false;
         }
 
-        if (score >= 10)
+        if (score >= 5)
         {
             strong = true;
         }
@@ -57,6 +58,10 @@ public class Points : MonoBehaviour
         if (score >= 60)
         {
             shooter = true;
+        }
+        if (score >= 10)
+        {
+            dodge = true;
         }
     }
 }
