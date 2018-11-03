@@ -169,6 +169,12 @@ Prefab:
       value: 
       objectReference: {fileID: 1346187946161562, guid: da8a418b0d46a4441ad8c9ca4698ecba,
         type: 2}
+    - target: {fileID: 114131673461938620, guid: acc9035e52a4c0b4c878085075134a8b,
+        type: 2}
+      propertyPath: ShootingDodgingEnemy
+      value: 
+      objectReference: {fileID: 1131943092708610, guid: 3e4479ab9cfe85a4d87873991f8a408a,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acc9035e52a4c0b4c878085075134a8b, type: 2}
   m_IsPrefabAsset: 0

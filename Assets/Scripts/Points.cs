@@ -20,6 +20,7 @@ public class Points : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        PlayerPrefs.SetFloat("playerScore", 0);
         score = 0;
         strong = false;
     }
@@ -28,7 +29,13 @@ public class Points : MonoBehaviour
     void Update()
     {
         PlayerPrefs.SetFloat("playerScore", score);
+
+        if (score > 0)
         scoreText.text = "Score: " + score.ToString();
+
+        else if (score <= 0)
+            scoreText.text = "Score: 0";
+
         if (score == 32 && trettioTvå == false)
         {
             GameObject trettio = Instantiate(trettiotvå, new Vector3(0f, 0f, 0f), new Quaternion(0f, 0f, 0f, 0f));
@@ -60,13 +67,17 @@ public class Points : MonoBehaviour
         {
             shooter = true;
         }
-        if (score >= 45)
+        if (score >= 10)
         {
             dodge = true;
         }
         if (score >= 40)
         {
             shootDodge = true;
+        }
+        if (score <= 0)
+        {
+            score = 0;
         }
     }
 }
