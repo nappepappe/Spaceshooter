@@ -14,6 +14,7 @@ public class EnemyProjectile : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        rbody = GetComponent<Rigidbody2D>();
         playerScript = GameObject.Find("Player").GetComponent<Player>();
         proSound = GetComponent<AudioSource>();
         rbody.rotation = -90;
