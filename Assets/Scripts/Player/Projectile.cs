@@ -16,12 +16,7 @@ public class Projectile : MonoBehaviour
         proSound.Play();
         GameObject splode1 = Instantiate(splody, transform.position, transform.rotation);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag != "Player")

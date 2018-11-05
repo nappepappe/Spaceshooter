@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyProjectile : MonoBehaviour
 {
-    public Rigidbody2D franstorm;
+    public Rigidbody2D rbody;
     public AudioSource proSound;
     public GameObject splosion;
-    public GameObject splody;
+    public GameObject startSplosion;
     public Player playerScript;
 
     public float damage = 1f;
@@ -16,9 +16,9 @@ public class EnemyProjectile : MonoBehaviour
     {
         playerScript = GameObject.Find("Player").GetComponent<Player>();
         proSound = GetComponent<AudioSource>();
-        franstorm.rotation = -90;
+        rbody.rotation = -90;
         proSound.Play();
-        GameObject splode1 = Instantiate(splody, transform.position, transform.rotation);
+        GameObject splode1 = Instantiate(startSplosion, transform.position, transform.rotation);
     }
 
     // Update is called once per frame
