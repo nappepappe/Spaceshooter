@@ -4,25 +4,20 @@ using UnityEngine;
 
 public class TriggerScript : MonoBehaviour
 {
-    public bool TriggerOn;
+    public bool TriggerOn; //om man nuddar
     // Use this for initialization
     void Start()
     {
-        TriggerOn = false;
+        TriggerOn = false; //sätter till false
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Wall")
-        TriggerOn = true;
+        if (collision.gameObject.tag == "Wall") //om man nuddar en vägg
+        TriggerOn = true; //sätter bool till true
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        TriggerOn = false;
+        TriggerOn = false; //sätter till false när man slutar nudda något
     }
 }

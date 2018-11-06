@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class MusicyBoi : MonoBehaviour
 {
-    public AudioSource musicSource;
+    public AudioSource musicSource; //musikens source
 
-    private bool illuminatiConfirmed;
+    private bool illuminatiConfirmed; //bool för om illuminati är spawnad
 
     // Use this for initialization
     void Start()
     { 
-        illuminatiConfirmed = false;
-        musicSource = GetComponent<AudioSource>();
-        musicSource.PlayDelayed(4.5f);
+        illuminatiConfirmed = false; //sätter bool till false
+        musicSource = GetComponent<AudioSource>(); //hittar ljudsource
+        musicSource.PlayDelayed(4.5f); //spelar ljudet efter 4.5 sek
     }
 
     // Update is called once per frame
@@ -21,21 +21,21 @@ public class MusicyBoi : MonoBehaviour
     {
 
 
-        if (GameObject.FindWithTag("TankEnemy") != null)
+        if (GameObject.FindWithTag("TankEnemy") != null) //om objektet finns
         {
-            illuminatiConfirmed = true;
+            illuminatiConfirmed = true; //ILLUMINATICONFIRMED (sätter bool till true)
         }
-        else if (GameObject.FindWithTag("TankEnemy") == null)
+        else if (GameObject.FindWithTag("TankEnemy") == null) //om den inte finns
         {
-            illuminatiConfirmed = false;
+            illuminatiConfirmed = false; //sätter till false
         }
-        if (illuminatiConfirmed == true)
+        if (illuminatiConfirmed == true) //om den är true 
         {
-            musicSource.volume = 0f;
+            musicSource.volume = 0f; //sänk volymen på musiken till 0
         }
-        else if (illuminatiConfirmed == false)
+        else if (illuminatiConfirmed == false) //om den inte är true
         {
-            musicSource.volume = 0.25f;
+            musicSource.volume = 0.25f; //återställer musiken
         }
     }
 }

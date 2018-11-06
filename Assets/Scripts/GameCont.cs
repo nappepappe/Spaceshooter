@@ -5,16 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class GameCont : MonoBehaviour
 {
-    private float deathTimer;
-    private bool TimerStart = false;
+    private float deathTimer; //timer
+    private bool TimerStart = false; //bool för om timern har startat
 
-    public AudioSource intervention;
-    public GameObject player;
+    public AudioSource intervention; //audiosource med dödsljudet
+    public GameObject player; //object för player
     // Use this for initialization
     void Start()
     {
 
-        deathTimer = 0;
+        deathTimer = 0; //sätter timern till 0
     }
 
     // Update is called once per frame
@@ -22,18 +22,18 @@ public class GameCont : MonoBehaviour
     {
         if (player == null && TimerStart == false)
         {
-            TimerStart = true;
-            deathTimer = 2.1f;
-            intervention.Play();
+            TimerStart = true; // sätter boolen till true
+            deathTimer = 2.1f; //sätter timern till 2.1
+            intervention.Play(); //spelar intervention ljudklippet
         }
-        if (deathTimer <= 0.1f && deathTimer > 0f)
+        if (deathTimer <= 0.1f && deathTimer > 0f) 
         {
-            Scene("Game Over");
+            Scene("Game Over"); //laddar scenen med string namnet
         }
-        deathTimer -= Time.deltaTime;
+        deathTimer -= Time.deltaTime; //gör så att timern räknar ned
     }
-    void Scene(string name)
+    void Scene(string name) //funktion för att byta scene
     {
-        SceneManager.LoadScene(name);
+        SceneManager.LoadScene(name); //byter till scene med namnet man anger när funktionen körs
     }
 }
