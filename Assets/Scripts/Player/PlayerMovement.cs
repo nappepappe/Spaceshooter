@@ -14,11 +14,7 @@ public class PlayerMovement : MonoBehaviour
     {
         startScript = GameObject.Find("StartObject").GetComponent<StartScript>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
+    
     private void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.W) && Hitbox1.TriggerOn == false && startScript.canPlay == true)
