@@ -12,19 +12,23 @@ public class HighScoreScript : MonoBehaviour
     void Start()
     {
         newHighScore.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        yourScoreText.text = "Your score: " + PlayerPrefs.GetFloat("playerScore").ToString();
-        highscoreText.text = "Highscore: " + PlayerPrefs.GetFloat("Highscore").ToString();
-
         if (PlayerPrefs.GetFloat("playerScore") > PlayerPrefs.GetFloat("Highscore"))
         {
             PlayerPrefs.SetFloat("Highscore", PlayerPrefs.GetFloat("playerScore"));
             newHighScore.SetActive(true);
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            PlayerPrefs.SetFloat("Highscore", 0f);
+        }
+        yourScoreText.text = "Your score: " + PlayerPrefs.GetFloat("playerScore").ToString();
+        highscoreText.text = "Highscore: " + PlayerPrefs.GetFloat("Highscore").ToString();
+
         
 
     }
