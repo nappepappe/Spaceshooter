@@ -198,7 +198,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
-  turnRed: 2
   deathScore: 1
   points: {fileID: 114003609222053468, guid: ccc6d4286d2036e4fab970271c0e2492, type: 2}
   sprite: {fileID: 212456818070001466}
@@ -216,7 +215,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.08
-  fransTorm: {fileID: 4669140590704568}
 --- !u!114 &114948354614353928
 MonoBehaviour:
   m_ObjectHideFlags: 1
