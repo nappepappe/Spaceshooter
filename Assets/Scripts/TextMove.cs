@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TextMove : MonoBehaviour
 {
-
+    //Funkar likadant som alla texturmove scripts i projektet. Se TseriesMove för kommentarer
     float time;
     Vector3 startPosition;
     Vector3 target = new Vector3(0.66f, 2.385553f, 0);

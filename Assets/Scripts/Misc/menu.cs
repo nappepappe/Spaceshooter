@@ -7,16 +7,16 @@ public class menu : MonoBehaviour
 {
     public void Restart()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Main"); //Laddar scenen Main
 
     }
     public void StartGame()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Main"); //Laddar scenen Main
     }
-    public void Exit()
+    public void Exit() 
     {
-        Application.Quit();
+        Application.Quit(); //stänger av spelet
     }
 
 }

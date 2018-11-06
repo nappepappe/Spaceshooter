@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IndierMove : MonoBehaviour
 {
-
+    //Funkar likadant som alla texturmove scripts i projektet. Se TseriesMove för kommentarer
     float time;
     Vector3 startPosition;
     Vector3 target = new Vector3(-5.13f, -2.13f, 0);

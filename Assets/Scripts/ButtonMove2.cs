@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ButtonMove2 : MonoBehaviour
 {
-
+    //Funkar likadant som alla texturmove scripts i projektet. Se TseriesMove för kommentarer
     float time;
     Vector3 startPosition;
     Vector3 target = new Vector3(960f, 200f, 0);
