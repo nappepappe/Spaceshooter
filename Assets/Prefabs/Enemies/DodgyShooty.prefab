@@ -226,7 +226,8 @@ MonoBehaviour:
   deathScore: 5
   points: {fileID: 0}
   sprite: {fileID: 212055419181189824}
-  desExposion: {fileID: 0}
+  desExposion: {fileID: 1202972217619190, guid: 83e3604cf61600e4a91b54ec0865b048,
+    type: 2}
   hurtSource: {fileID: 82431072080927982}
 --- !u!114 &114939802281556184
 MonoBehaviour:

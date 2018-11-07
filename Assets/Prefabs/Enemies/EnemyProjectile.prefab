@@ -211,7 +211,8 @@ MonoBehaviour:
   rbody: {fileID: 50580393247290332}
   proSound: {fileID: 82113275685133832}
   splosion: {fileID: 1419876859849052, guid: 7c1210502340ad34d85544f7d00e225a, type: 2}
-  startSplosion: {fileID: 0}
+  startSplosion: {fileID: 1827365898207060, guid: 88e947220caef5f479ab7fe43e6df902,
+    type: 2}
   playerScript: {fileID: 0}
   damage: 1
 --- !u!212 &212874061573969282

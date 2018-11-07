@@ -345,7 +345,8 @@ MonoBehaviour:
   deathScore: 10
   points: {fileID: 0}
   sprite: {fileID: 212284720924301280}
-  splosion: {fileID: 1202972217619190, guid: 83e3604cf61600e4a91b54ec0865b048, type: 2}
+  desExposion: {fileID: 1202972217619190, guid: 83e3604cf61600e4a91b54ec0865b048,
+    type: 2}
   hurtSource: {fileID: 82712625374178940}
 --- !u!212 &212284720924301280
 SpriteRenderer:
