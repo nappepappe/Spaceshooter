@@ -197,9 +197,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   franstorm: {fileID: 50945271720159316}
-  proSound: {fileID: 0}
-  splosion: {fileID: 1419876859849052, guid: 7c1210502340ad34d85544f7d00e225a, type: 2}
-  splody: {fileID: 1827365898207060, guid: 88e947220caef5f479ab7fe43e6df902, type: 2}
+  proSound: {fileID: 82662411343480010}
+  explosion: {fileID: 1419876859849052, guid: 7c1210502340ad34d85544f7d00e225a, type: 2}
+  startExplosion: {fileID: 1827365898207060, guid: 88e947220caef5f479ab7fe43e6df902,
+    type: 2}
 --- !u!114 &114955112208440630
 MonoBehaviour:
   m_ObjectHideFlags: 1

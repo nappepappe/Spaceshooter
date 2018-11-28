@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMove : MonoBehaviour
+public class BasicEnemyMove : EnemyMoveBase
 {
-    public float moveSpeed; //float för speed
-
-    // Update is called once per frame
-    void Update()
+    protected override void Move()
     {
-        
         transform.Translate(-moveSpeed, 0f, 0f, Space.World); //rör objektet åt vänster med speed som hastighet
     }
 }
