@@ -351,7 +351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 570303717}
   - component: {fileID: 570303720}
-  - component: {fileID: 570303721}
+  - component: {fileID: 570303722}
   - component: {fileID: 570303719}
   - component: {fileID: 570303718}
   m_Layer: 5
@@ -466,7 +466,7 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 570303716}
   m_CullTransparentMesh: 0
---- !u!114 &570303721
+--- !u!114 &570303722
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -474,9 +474,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 570303716}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aa665b4e06c0fc4687d319cb9d7bd36, type: 3}
+  m_Script: {fileID: 11500000, guid: de1e0050ab8b0c24eb1bd89cfc9b4f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {x: 960, y: 200, z: 0}
+  timeToReachTarget: 0.5
 --- !u!1001 &621106650
 Prefab:
   m_ObjectHideFlags: 0
@@ -1059,8 +1061,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1778614904}
   - component: {fileID: 1778614907}
-  - component: {fileID: 1778614908}
   - component: {fileID: 1778614906}
+  - component: {fileID: 1778614909}
   - component: {fileID: 1778614905}
   m_Layer: 5
   m_Name: Restart
@@ -1174,7 +1176,7 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1778614903}
   m_CullTransparentMesh: 0
---- !u!114 &1778614908
+--- !u!114 &1778614909
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1182,9 +1184,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1778614903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2386971f80f18ce498ae95aab5161466, type: 3}
+  m_Script: {fileID: 11500000, guid: de1e0050ab8b0c24eb1bd89cfc9b4f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {x: 960, y: 440, z: 0}
+  timeToReachTarget: 0.5
 --- !u!1 &1897307838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,8 +1197,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1897307840}
-  - component: {fileID: 1897307841}
   - component: {fileID: 1897307839}
+  - component: {fileID: 1897307841}
   m_Layer: 0
   m_Name: Game_over_Text
   m_TagString: Untagged
@@ -1269,9 +1273,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1897307838}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 117522c0dbf599a448e4ee52d7ce80dd, type: 3}
+  m_Script: {fileID: 11500000, guid: de1e0050ab8b0c24eb1bd89cfc9b4f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {x: 2.3, y: 2.47, z: 0}
+  timeToReachTarget: 0.5
 --- !u!1 &2014505439
 GameObject:
   m_ObjectHideFlags: 0

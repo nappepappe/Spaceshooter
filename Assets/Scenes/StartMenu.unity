@@ -122,7 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 390646191}
   - component: {fileID: 390646194}
-  - component: {fileID: 390646195}
+  - component: {fileID: 390646196}
   - component: {fileID: 390646193}
   - component: {fileID: 390646192}
   m_Layer: 5
@@ -237,7 +237,7 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 390646190}
   m_CullTransparentMesh: 0
---- !u!114 &390646195
+--- !u!114 &390646196
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,9 +245,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 390646190}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2386971f80f18ce498ae95aab5161466, type: 3}
+  m_Script: {fileID: 11500000, guid: de1e0050ab8b0c24eb1bd89cfc9b4f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {x: 960, y: 440, z: 0}
+  timeToReachTarget: 0.5
 --- !u!1 &762388334
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,7 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 762388336}
   - component: {fileID: 762388335}
-  - component: {fileID: 762388337}
+  - component: {fileID: 762388339}
   - component: {fileID: 762388338}
   m_Layer: 0
   m_Name: GameTitle
@@ -325,17 +327,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &762388337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 762388334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baf0e788da2d5924dad5c0bf63422b13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &762388338
 AudioSource:
   m_ObjectHideFlags: 0
@@ -431,6 +422,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &762388339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 762388334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de1e0050ab8b0c24eb1bd89cfc9b4f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {x: 0.66, y: 2.385553, z: 0}
+  timeToReachTarget: 0.5
 --- !u!1 &881988526
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,7 +684,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1590097478}
   - component: {fileID: 1590097481}
-  - component: {fileID: 1590097482}
+  - component: {fileID: 1590097483}
   - component: {fileID: 1590097480}
   - component: {fileID: 1590097479}
   m_Layer: 5
@@ -795,7 +799,7 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1590097477}
   m_CullTransparentMesh: 0
---- !u!114 &1590097482
+--- !u!114 &1590097483
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -803,9 +807,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1590097477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aa665b4e06c0fc4687d319cb9d7bd36, type: 3}
+  m_Script: {fileID: 11500000, guid: de1e0050ab8b0c24eb1bd89cfc9b4f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {x: 960, y: 200, z: 0}
+  timeToReachTarget: 0.5
 --- !u!1 &1687186157
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,9 +1003,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1794648985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64f21faac8b1ce046905d930ea237ecc, type: 3}
+  m_Script: {fileID: 11500000, guid: de1e0050ab8b0c24eb1bd89cfc9b4f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {x: 5, y: -2.18, z: 0}
+  timeToReachTarget: 0.5
 --- !u!1 &1885864524
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,6 +1244,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2066221813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e384051ab63c333418f2619733089d21, type: 3}
+  m_Script: {fileID: 11500000, guid: de1e0050ab8b0c24eb1bd89cfc9b4f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {x: -5.13, y: -2.13, z: 0}
+  timeToReachTarget: 0.5
