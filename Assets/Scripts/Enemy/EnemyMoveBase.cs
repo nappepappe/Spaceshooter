@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class EnemyMoveBase : MonoBehaviour
 {
-    protected float moveSpeed; //float för speed
+    public float moveSpeed; //float för speed
 
     // Update is called once per frame
     void Update()

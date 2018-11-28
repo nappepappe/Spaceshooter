@@ -2,19 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DodgingMove : MonoBehaviour
+public class DodgingMove : EnemyMoveBase
 {
-    private Rigidbody2D rbody; //objektets rigidbody2d komponent
-    // Use this for initialization
-    void Start()
+    private Rigidbody2D rbody;
+    private void Start()
     {
-        rbody = GetComponent<Rigidbody2D>(); //hittar komponenten
+        rbody = GetComponent<Rigidbody2D>();
     }
-
-    // Update is called once per frame
-    void Update()
+    protected override void Move()
     {
-        rbody.velocity = new Vector2(-5f, 10f * Mathf.Sin(Time.time * 5) * 0.5f); 
+        rbody.velocity = new Vector2(-5f, 10f * Mathf.Sin(Time.time * 5) * 0.5f);
         //sätter objectets fart till att röra sig i ett sinusvågsmönster i y axeln och åt vänster i x axeln
     }
 }
