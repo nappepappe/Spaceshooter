@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TseriesMove : MonoBehaviour
+public class MoveBase : MonoBehaviour
 {
 
     float time; //Float för hur lång tid förflyttningen ska ta
-    Vector3 startPosition; //texturens startposition
-    Vector3 target = new Vector3(5f, -2.18f, 0); //Dit texturen ska flyttas
-    float timeToReachTarget = 0.5f;//Tiden som det tar för texten att flyttas
+     Vector3 startPosition; //texturens startposition
+    public Vector3 target = new Vector3(0,0,0); //Dit texturen ska flyttas
+    public float timeToReachTarget = 0.0f;//Tiden som det tar för texten att flyttas
     void Start()
     {
         startPosition = transform.position; //Hittar startpositonen
