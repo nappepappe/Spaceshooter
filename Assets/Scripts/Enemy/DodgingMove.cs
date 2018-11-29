@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class DodgingMove : EnemyMoveBase
 {
-    private Rigidbody2D rbody;
-    private void Start()
-    {
-        rbody = GetComponent<Rigidbody2D>();
-    }
+    
     protected override void Move()
     {
         rbody.velocity = new Vector2(-5f, 10f * Mathf.Sin(Time.time * 5) * 0.5f);
