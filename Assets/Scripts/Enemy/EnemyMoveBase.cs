@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class EnemyMoveBase : MonoBehaviour
 {
     public float moveSpeed; //float för speed
@@ -17,6 +18,6 @@ public class EnemyMoveBase : MonoBehaviour
     }
     protected virtual void Move()
     {
-        transform.Translate(-moveSpeed, 0f, 0f, Space.World); //rör objektet åt vänster med speed som hastighet
+        rbody.velocity = new Vector2(-moveSpeed, 0f);//rör objektet åt vänster med speed som hastighet
     }
 }
